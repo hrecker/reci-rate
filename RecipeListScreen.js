@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default class RecipeListScreen extends React.Component {
+export default class RecipeListScreen extends Component {
   render() {
-    const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
-		<Text>RecipeListScreen</Text>
+        <Text>RecipeListScreen</Text>
         <Text>View all your Recipes here!!!</Text>
       </View>
     );

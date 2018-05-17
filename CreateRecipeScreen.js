@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Layout from './components/Layout';
 
 export default class CreateRecipeScreen extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text>CreateRecipeScreen</Text>
-        <Text>Create a Recipe here!!!</Text>
-      </View>
+      <Layout navigation={this.props.navigation}>
+        <View style={styles.container}>
+          <Text>CreateRecipeScreen</Text>
+          <Text>Create a Recipe here!!!</Text>
+        </View>
+      </Layout>
     );
   }
 }

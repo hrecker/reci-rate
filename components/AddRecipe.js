@@ -18,21 +18,8 @@ export default class AddRecipe extends Component {
       text: '',
       error: false
     }
-    // this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  
-  /*setRecipeName(e) {
-    this.setState({
-      name: e.nativeEvent.text
-    });
-  }
-  
-  setRecipeText(e) {
-    this.setState({
-      text: e.nativeEvent.text
-    });
-  }*/
   
   handleSubmit() {
     addRecipe(this.state.name, this.state.text);
@@ -72,11 +59,9 @@ export default class AddRecipe extends Component {
 
 const styles = StyleSheet.create({
   main: {
-    //flex: 1,
     padding: 30,
-    //flexDirection: 'column',
     justifyContent: 'center',
-    backgroundColor: '#fa6807'
+    borderWidth: 1,
   },
   title: {
     marginBottom: 20,
@@ -94,7 +79,6 @@ const styles = StyleSheet.create({
     marginRight: 5,
     fontSize: 23,
     borderWidth: 1,
-    //borderColor: 'white',
     borderRadius: 8,
   },
   buttonText: {
@@ -106,7 +90,6 @@ const styles = StyleSheet.create({
     height: 45,
     flexDirection: 'row',
     backgroundColor:'white',
-    //borderColor: 'white',
     borderWidth: 1,
     borderRadius: 8,
     marginBottom: 10,

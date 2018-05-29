@@ -16,7 +16,6 @@ export default class CreateRecipeScreen extends Component {
           behavior="padding"
           enabled
         >
-          <Text>Create a Recipe here!!!</Text>
           <AddRecipe/>
         </KeyboardAvoidingView>
       </Layout>

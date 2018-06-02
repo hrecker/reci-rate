@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, KeyboardAvoidingView } from 'react-native';
 import Layout from './components/Layout';
+import AddRecipe from './components/AddRecipe';
 
 export default class CreateRecipeScreen extends Component {
   constructor(props) {
@@ -10,10 +11,13 @@ export default class CreateRecipeScreen extends Component {
   render() {
     return (
       <Layout navigation={this.props.navigation}>
-        <View style={styles.container}>
-          <Text>CreateRecipeScreen</Text>
-          <Text>Create a Recipe here!!!</Text>
-        </View>
+        <KeyboardAvoidingView 
+          style={styles.container}
+          behavior="padding"
+          enabled
+        >
+          <AddRecipe/>
+        </KeyboardAvoidingView>
       </Layout>
     );
   }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View, KeyboardAvoidingView } from 'react-native';
 import Layout from './components/Layout';
 
 export default class HomeScreen extends Component {
@@ -11,7 +11,11 @@ export default class HomeScreen extends Component {
     const { navigate } = this.props.navigation;
     return (
       <Layout navigation={this.props.navigation}>
-        <View style={styles.container}>
+        <KeyboardAvoidingView 
+          style={styles.container}
+          behavior="padding"
+          enabled
+        >
           <Text>HomeScreen</Text>
           <Text>Do whatever here!!!</Text>
           <Button
@@ -26,7 +30,7 @@ export default class HomeScreen extends Component {
             title="Go view a recipe!"
             onPress={() => navigate('ViewRecipe')}
           />
-        </View>
+        </KeyboardAvoidingView>
       </Layout>
     );
   }

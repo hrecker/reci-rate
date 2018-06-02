@@ -18,10 +18,9 @@ export default class AddRecipe extends Component {
       text: '',
       error: false
     }
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
   
-  handleSubmit() {
+  handleSubmit = () => {
     addRecipe(this.state.name, this.state.text);
     Alert.alert('saved recipe successfully');
   }
